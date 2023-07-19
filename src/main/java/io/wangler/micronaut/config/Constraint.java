@@ -14,8 +14,9 @@
 package io.wangler.micronaut.config;
 
 import io.micronaut.core.annotation.Introspected;
+import io.micronaut.serde.annotation.Serdeable;
 
-@Introspected
+@Serdeable
 public record Constraint(Type type, String range, String value) {
   public enum Type {
     AGE,
