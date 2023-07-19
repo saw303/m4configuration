@@ -14,7 +14,7 @@
 package io.wangler.micronaut.config;
 
 import io.micronaut.context.annotation.ConfigurationProperties;
-import io.micronaut.core.annotation.Introspected;
+import io.micronaut.serde.annotation.Serdeable;
 
 import java.util.List;
 import java.util.UUID;
@@ -26,9 +26,9 @@ public interface InsuranceNeedConfiguration {
 
   List<InsuranceNeed> getInsuranceNeeds();
 
-  @Introspected
+  @Serdeable
   record InsuranceNeed(UUID id, String key, List<Product> products) {}
 
-  @Introspected
+  @Serdeable
   record Product(String name, Constraint constraint) {}
 }

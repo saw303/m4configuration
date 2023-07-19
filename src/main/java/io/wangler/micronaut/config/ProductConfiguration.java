@@ -14,9 +14,9 @@
 package io.wangler.micronaut.config;
 
 import io.micronaut.context.annotation.ConfigurationProperties;
-import io.micronaut.core.annotation.Introspected;
+import io.micronaut.serde.annotation.Serdeable;
+import jakarta.validation.constraints.NotBlank;
 
-import javax.validation.constraints.NotBlank;
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
@@ -44,7 +44,7 @@ public interface ProductConfiguration {
 
   Set<Product> getProducts();
 
-  @Introspected
+  @Serdeable
   record Product(
       String name,
       InsuranceBeginStrategy insuranceBeginStrategy,
@@ -62,7 +62,7 @@ public interface ProductConfiguration {
     FIRST_DAY_OF_THE_FOLLOWING_YEAR_OR_NEXT_MONTH
   }
 
-  @Introspected
+  @Serdeable
   record Criterion(CriterionName name, Boolean exposable, Constraint constraint, String value) {
     public enum CriterionName {
       ACCIDENT,

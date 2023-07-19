@@ -3,4 +3,4 @@ defaultPackage: io.wangler.micronaut
 testFramework: spock
 sourceLanguage: java
 buildTool: gradle_kotlin
-features: [annotation-api, app-name, gradle, http-client, jackson-databind, java, java-application, logback, micronaut-build, netty-server, readme, shade, spock, yaml]
+features: [app-name, gradle, http-client-test, java, java-application, junit, logback, micronaut-aot, micronaut-build, netty-server, readme, serialization-jackson, shade, validation, yaml, yaml-build]
