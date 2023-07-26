@@ -2,7 +2,7 @@ plugins {
     id("groovy")
     id("com.github.johnrengelman.shadow") version "8.1.1"
     id("io.micronaut.application") version "4.0.1"
-    id("io.micronaut.aot") version "4.0.1"
+    //id("io.micronaut.aot") version "4.0.1"
 }
 
 version = "0.1"
@@ -39,6 +39,7 @@ micronaut {
         incremental(true)
         annotations("io.wangler.micronaut.*")
     }
+/*
     aot {
         // Please review carefully the optimizations enabled below
         // Check https://micronaut-projects.github.io/micronaut-aot/latest/guide/ for more details
@@ -50,4 +51,5 @@ micronaut {
         deduceEnvironment.set(true)
         optimizeNetty.set(true)
     }
+*/
 }

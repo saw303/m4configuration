@@ -8,7 +8,7 @@ public class SomeJob {
 
     private boolean paused = false;
 
-    @Scheduled(fixedRate = "${hello.world.rate}", condition = "#{!this.paused}" )
+    @Scheduled(fixedRate = "#{ env['hello.world.rate'] }", condition = "#{!this.paused}")
     public void doSomething() {
         System.out.println("The job runs...");
     }
