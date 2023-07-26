@@ -6,6 +6,10 @@ netty:
     allocator:
       max-order: 3
 
+hello:
+  world:
+    rate: 10m
+
 onstructive:
   product-engine:
     insurance-needs:
